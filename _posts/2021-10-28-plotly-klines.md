@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: "一篇教程: 使用plotly绘制K线图"
 subtitle: "写给我的爱人"
 date: 2021-10-28
