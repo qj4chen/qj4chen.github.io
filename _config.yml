@@ -7,7 +7,7 @@ description: ""
 keyword: "Machine Learning, Deep Learning, Natural Language Processing, Data Science, Quant Trading"
 url: "http://qj4chen.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/" # you code repository
+github_repo: "https://github.com/qj4chen/" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
