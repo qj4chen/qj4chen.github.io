@@ -29,7 +29,7 @@ twitter_username: jekyllrb
 github_username:  qj4chen
 
 # Build settings
-theme: minima
+theme: jekyll-theme-minimal
 permalink: /:categories/:year/:month/:day/:title/
 plugins:
   - jekyll-feed
