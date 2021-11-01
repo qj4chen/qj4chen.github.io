@@ -1,10 +1,9 @@
 ---
 layout: 	post
-title: 		一篇教程: 使用plotly绘制K线图
-subtitle: 	"写给我的爱人"
-author: 	qj4chen
+title: 		"一篇教程: 使用plotly绘制K线图"
+author: 	"qj4chen"
 catalog: 	true
-header-img: img/kline_using_plotly_easy/last.png
+header-img: "img/kline_using_plotly_easy/last.png"
 tags:
 	- data_visualization
 ---
