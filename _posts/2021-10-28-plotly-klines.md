@@ -5,7 +5,7 @@ subtitle: 写给我的爱人
 date: 2021-10-28
 author: qj4chen
 catalog: true
-header-img:  img/kline_using_plotly_easy/last.png
+header-img:  ../img/kline_using_plotly_easy/last.png
 tags:
 	- data visualization
 ---
