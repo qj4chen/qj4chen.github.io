@@ -1,18 +1,18 @@
 # Site settings
 title: cqj's blog
 SEOTitle: 陈祺进的博客 | CQJ's Blog
-header-img: img/proposal.jpg
+header-img: img/proposal_cut.jpg
 email: qijin.chen.sh@gmail.com
 description: ""
-keyword: "Machine Learning, Deep Learning, Natural Language Processing, Data Science, Quant"
-url: "http://qiubaiying.github.io"          # your host, for absolute URL
+keyword: "Machine Learning, Deep Learning, Natural Language Processing, Data Science, Quant Trading"
+url: "http://qj4chen.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/qiubaiying/" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar.png     # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
