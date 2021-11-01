@@ -1,11 +1,11 @@
 ---
-layout: page
-title: "一篇教程: 使用plotly绘制K线图"
-subtitle: "写给我的爱人"
-date: 2021-10-28
-author: qj4chen
-catalog: true
-header-img: /img/kline_using_plotly_easy/last.png
+layout: 	post
+title: 		一篇教程: 使用plotly绘制K线图
+subtitle: 	"写给我的爱人"
+date: 		2021-10-28
+author: 	qj4chen
+catalog: 	true
+header-img: img/kline_using_plotly_easy/last.png
 tags:
 	- data visualization
 ---
@@ -90,7 +90,8 @@ fig = go.Figure(data=[
 fig.show()
 ```
 You may have discovered that k-lines is acually a candlestick plot using `open price`, `high price`, `low price`, `close price` and the candle stick is composed as the picture below.
-![picture](../img/kline_using_plotly_easy/candlestick.png)
+![picture](/img/kline_using_plotly_easy/candlestick.png)
+
 # 2.2 save the plot as a html file
 After we need to export the plot into a html file so that we could embed it elsewhere. Simply use the following code:
 ```python
@@ -103,17 +104,17 @@ We know that construct a beautiful webpage requires lots of work. And for the oc
 
 We create a simple word document as shown in the picture below
 
-![pic](../img/kline_using_plotly_easy/word.png)
+![pic](/img/kline_using_plotly_easy/word.png)
 
 We then save the file as a html file by clicking `文件-另存为`, and select the file type as illustrated. 
 
-![pic](../img/kline_using_plotly_easy/word_save_as.png)
+![pic](/img/kline_using_plotly_easy/word_save_as.png)
 
 And then use a text editor software to modify the doc, here we use `Visual Studio Code` for demonstration.
 
 We navigate the position we want to insert the plot. 
 
-![pic](../img/kline_using_plotly_easy/html_code.png)
+![pic](/img/kline_using_plotly_easy/html_code.png)
 
 And we delete the text block and add the following code.
 
@@ -129,5 +130,5 @@ Then again, if you have question about this, feel free to consult to the web for
 
 # Finally
 Thanks to `plotly` and `Github`, we can now render our analysis to the Magic Liquid Gold in China vividly in our browser.
-![pic](../img/kline_using_plotly_easy/last.png)
+![pic](/img/kline_using_plotly_easy/last.png)
 

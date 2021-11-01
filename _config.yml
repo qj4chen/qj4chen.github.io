@@ -1,7 +1,7 @@
 # Site settings
 title: qj4chen
 SEOTitle: 陈祺进的博客 | CQJ's Blog
-header-img: img/proposal_cut.jpg
+header-img: /img/proposal_cut.jpg
 email: qijin.chen.sh@gmail.com
 description: ""
 keyword: "Machine Learning, Deep Learning, Natural Language Processing, Data Science, Quant Trading"
