@@ -21,8 +21,8 @@
 title: 欢迎来到我的个人站, Welcome!
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-I am currently interested in the intersection of Machine Learning and Finance. Meanwhile
-I am also exploring the application of Natural Language Processing on Journalism
+  I am currently interested in the intersection of Machine Learning and Finance. Meanwhile
+  I am also exploring the application of Natural Language Processing on Journalism
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
