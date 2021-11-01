@@ -1,10 +1,10 @@
 # Site settings
 title: cqj's blog
 SEOTitle: 陈祺进的博客 | CQJ's Blog
-header-img: img/post-bg-desk.jpg
+header-img: img/proposal.jpg
 email: qijin.chen.sh@gmail.com
-description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
+description: ""
+keyword: "Machine Learning, Deep Learning, Natural Language Processing, Data Science, Quant"
 url: "http://qiubaiying.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
@@ -18,11 +18,8 @@ sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's us
 
 # SNS settings
 RSS: false
-zhihu_username:     qiubaiying
+zhihu_username:     I don't have a zhihu account yet
 github_username:    qj4chen
-
-
-
 
 
 # Build settings
@@ -40,7 +37,6 @@ gems: [jekyll-paginate]
 
 
 
-
 # Markdown settings
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
@@ -49,28 +45,6 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
-
-
-
-# 评论系统
-# Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
-
-# Gitalk
-gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-  repo: qiubaiying.github.io    #仓库名称
-  owner: qiubaiying    #github用户名
-  admin: qiubaiying
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
-
-
-# 统计
-
-
-
 
 
 
