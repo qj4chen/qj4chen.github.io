@@ -5,7 +5,7 @@ subtitle: 写给我的爱人
 date: 2021-10-28
 author: qj4chen
 catalog: true
-header-img: ../ img/kline_using_plotly_easy/last.png
+header-img:  img/kline_using_plotly_easy/last.png
 tags:
 	- data visualization
 ---
@@ -24,7 +24,7 @@ Use your account to log into the [site](https://tushare.pro/) for further steps.
 
 After log in to the `tushare` site, you need to navigate to the user center and find below the `接口Token` panel and copy your token. 
 
-![Screen shot of `tushare` user center](../img/kline_using_plotly_easy/tushare_token.png)
+![Screen shot of `tushare` user center](img/kline_using_plotly_easy/tushare_token.png)
 
 With the token you just found, you are now able to request data from  `tushare` using the user-friendly api provided by them. You may not be familiar with what api is, but all you need to know about it is api is the first approach you should try if you want to fetch from a data source, and if it is not available, then other approached may be considered such as web crawler and manually downloading.
 
