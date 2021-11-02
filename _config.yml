@@ -4,10 +4,10 @@
 baseurl: ""
 url: ""
 date_format: "ordinal"
-title: CQJ's BlOG
+title: Chen Qijin's BlOG
 subtitle: "Learn hard and Play hard"
 description: "这里是 Chen Qijin 的个人博客，用来归类整理我在学习生活中遇到的问题和解决方法，请随意浏览。"
-keywords: Hello CM,CM,MZJ,mzj,Corkine,corkine,ma zhangjing,mazhangjing,mazj,Mazj
+keywords: Hello CQJ, chen qijin, Chen Qijin, CQJ
 favicon: /favicon.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
@@ -35,6 +35,9 @@ navs:
   -
     href: /
     label: 笔记
+  -
+    href: /wiki/
+    label: wiki
   -
     href: /categories/
     label: 归档
