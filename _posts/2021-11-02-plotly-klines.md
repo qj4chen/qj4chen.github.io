@@ -1,12 +1,10 @@
 ---
-layout: 	post
-title: 		一篇教程: 使用plotly绘制K线图（简单）
+layout: post
+title: 一篇教程: 使用plotly绘制K线图（简单）
 categories: 
 - Visualization
 - Python
 ---
-
-
 > EXCLUSIVE. For my beautiful and cute wife only.
 
 this tutorial aims to finish THREE popular tasks concerning data analysis, data visualization and combining it into html file, a.k.a for the purpose of using the analysis elsewhere other than local computer
