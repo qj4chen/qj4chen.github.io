@@ -2,7 +2,7 @@
 layout: page
 title: About Me
 description: 关于我
-keywords: corkine，马章竞
+keywords: Chenqijin
 comments: true
 menu: 关于
 permalink: /about/
@@ -19,26 +19,26 @@ Hello everyone!
 
 ## 联系
 
-* GitHub：[@corkine](https://github.com/corkine)
+* GitHub：[@qj4chen](https://github.com/qj4chen)
 * 博客：[{{ site.title }}]({{ site.url }})
-* 主站：[www.mazhangjing.com](http://www.mazhangjing.com)
 
 ## 技能
 
-#### 平面设计与影视制作
+#### 机器学习与深度学习
 <div class="btn-inline">
     {% for keyword in site.skill_software_keywords %}
     <button class="btn btn-outline" type="button">{{ keyword }}</button>
     {% endfor %}
 </div>
 
-#### 全栈工程师(伪)
+#### 金融与量化
 <div class="btn-inline">
     {% for keyword in site.skill_mobile_app_keywords %}
     <button class="btn btn-outline" type="button">{{ keyword }}</button>
     {% endfor %}
 </div>
 
+## 经历
 #### 生活技能和职业发展
 <div class="btn-inline">
     {% for keyword in site.skill_windows_keywords %}
@@ -47,4 +47,4 @@ Hello everyone!
 </div>
 
 <br>
-Ps. 星号*为正在学习/练习的技能点。
+Ps. 星号*为正在学习/加强的技能点。

@@ -4,7 +4,7 @@
 baseurl: ""
 url: ""
 date_format: "ordinal"
-title: Qijin's BlOG
+title: CQJ's BlOG
 subtitle: "知行合一"
 description: "这里是 Chen Qijin 的个人博客，用来归类整理我在学习生活中遇到的问题和解决方法，请随意浏览。"
 keywords: Hello CM,CM,MZJ,mzj,Corkine,corkine,ma zhangjing,mazhangjing,mazj,Mazj
@@ -29,9 +29,9 @@ navs:
   -
     href: /
     label: 首页
-  -
-    href: /
-    label: 主站
+  # -
+  #   href: /
+  #   label: 主站
   -
     href: /
     label: 笔记
@@ -78,8 +78,8 @@ repository: qj4chen/qj4chen.github.io
 # ---------------- #
 #      Socials     #
 # ---------------- #
-github_username: corkine
-zhihu_username: corkine
+github_username: qj4chen
+zhihu_username: qj4chen
 
 # ---------------- #
 #      Comments    #
@@ -102,6 +102,6 @@ google:
 # ---------------- #
 #      Datas       #
 # ---------------- #
-# skill_software_keywords: [马文摄影工作室(武汉) MarvinStudio.cn , Adobe PhotoShop & Lightroom, Adobe illustrator, Adobe inDesign, Adobe Prime]
-# skill_mobile_app_keywords: [VB.NET, React*(HTML/CSS/BootStrap/JQuery*), Qt(QSS/QML*), JavaScript, Python, C++*, Django*, MongoDB, MariaDB*, IndexedDB*, 数据清洗(numpy/pandas/matplotlib/seaborn)]
-# skill_windows_keywords: [农学学士, 基础心理学(理学)学士, 脑与认知(视知觉领域)硕士*]
+skill_software_keywords: [RNN(LSTM, GRU), CNN, BERT, GCN*, GAN, 机器学习(LR, Tree, Bagging, Boosting, SVM, NB)]
+skill_mobile_app_keywords: [数据清洗(numpy/pandas/matplotlib/plotly), 多因子策略, 价值选股与RSRS择时, 期限套利]
+skill_windows_keywords: [管理学学士, 工学学士, 管理科学与工程硕士*]
