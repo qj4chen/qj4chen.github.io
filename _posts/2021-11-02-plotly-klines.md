@@ -6,7 +6,7 @@ categories:
 - Python
 ---
 
-> EXCLUSIVE. For my beautiful and cute wife only.
+> EXCLUSIVE! For my beautiful and cute wife only.
 
 this tutorial aims to finish THREE popular tasks concerning data analysis, data visualization and combining it into html file, a.k.a for the purpose of using the analysis elsewhere other than local computer
 
