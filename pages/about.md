@@ -12,10 +12,10 @@ Hello everyone!
 
 这里是我的个人博客，用来归类整理我在学习生活中遇到的问题和解决方法，请随意浏览。 
 
-## 坚信
+## 近期研究兴趣
 
-* Life is a struggle.
-* 生活就像西西弗斯的神话。
+* 自然语言处理和新闻传播学的交叉应用，包括但不限于：假新闻检测、自动文本摘要、情感分析
+* 金融时间序列预测
 
 ## 联系
 
@@ -38,8 +38,7 @@ Hello everyone!
     {% endfor %}
 </div>
 
-## 经历
-#### 生活技能和职业发展
+#### 经历
 <div class="btn-inline">
     {% for keyword in site.skill_windows_keywords %}
     <button class="btn btn-outline" type="button">{{ keyword }}</button>
