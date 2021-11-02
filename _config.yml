@@ -37,7 +37,7 @@ navs:
     label: 笔记
   -
     href: /wiki/
-    label: wiki
+    label: Wiki
   -
     href: /categories/
     label: 归档
