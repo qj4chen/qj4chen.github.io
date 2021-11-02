@@ -29,9 +29,6 @@ navs:
   -
     href: /
     label: 首页
-  # -
-  #   href: /
-  #   label: 主站
   -
     href: /
     label: 笔记
@@ -40,7 +37,7 @@ navs:
     label: Wiki
   -
     href: /categories/
-    label: 归档
+    label: 分类
   -
     href: /about/
     label: 关于
