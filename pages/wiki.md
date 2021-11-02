@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Wiki
-description: 人越学越觉得自己无知
+description: 永不止步
 keywords: 维基, Wiki
 comments: false
 menu: 维基
 permalink: /wiki/
 ---
 
-> 银河系漫游指南第三章第三节
+> 以下展示了部分长文：
 
 <ul class="listing">
 {% for wiki in site.wiki %}
