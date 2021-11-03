@@ -84,13 +84,13 @@ with open('./data.txt') as file:
 
 * `\`是为了表示转义字符`/` (`\/`才能在正则表达式里表示`/`, 或许你不理解这一点, 但是, 看看`regexr.com`的侧边栏`cheatsheet`或许你就明白了)
 
-<img src=/img/eastmoney/image-20211103194912573.png width=400 />
+<img src="/img/eastmoney/image-20211103194912573.png" width=400 />
 
 可以看出, 现在, 我们的正则表达式还剩下`([\s\S]*?)`, `[\s\S]*?`, `[\s\S]*?`, `([\s\S]*?)`, 而这四个有两个还是相同的, 就只剩下了`([\s\S]*?)`, `[\s\S]*?`. 而它们俩的区别只是少了一对括号`()`.
 
 那么, `[\s\S]*?`在做什么事呢? 一句话总结, 它能匹配两个精确字符串之间的全部字符. 比如我们截图里这个就在匹配`<div class="qa_question_text">`和`<\/div>`之间的全部字符. 
 
-<img src=/img/eastmoney/image-20211103194218025.png alt="image-20211103194218025" width=400 />
+<img src="/img/eastmoney/image-20211103194218025.png" alt="image-20211103194218025" width=400 />
 
 至于它具体是怎么实现的嘛, 在`https://regexr.com/`上, 把鼠标移动到某个正则表达式代码附近, 网站就会提示你, 用`小灰框`框出可以拆分的最小单元, 然后告诉你这个小单元是在做什么. 
 
@@ -134,6 +134,27 @@ question_answer_pairs = [(q.strip(), a.strip()) for q, a in question_answer_pair
 ```
 
 到此为止, 我们已经实现了从一段原始的html文件中提取出一对对的股民与上市公司的问答.
+
+# 完整代码
+附上本文用到的全部代码：
+
+```python
+import re
+
+with open('./data.txt') as file:
+    html = file.read()
+
+# method 1: not safe
+questions = re.findall(string=html, pattern=r'<div class="qa_question_text">([\s\S]*?)<\/div>')
+questions = [ques.strip() for ques in questions]
+answers = re.findall(string=html, pattern=r'<div class="qa_answer_text">[\s\S]*?<p>([\s\S]*?)<\/p>')
+answers = [ans.strip() for ans in answers]
+
+# method 2: better
+question_answer_pairs = re.findall(string=html,
+                                   pattern=r'<div class="qa_question_text">([\s\S]*?)<\/div>[\s\S]*?<div class="qa_answer_text">[\s\S]*?<p>([\s\S]*?)<\/p>')
+question_answer_pairs = [(q.strip(), a.strip()) for q, a in question_answer_pairs]
+```
 
 # 未完待续
 

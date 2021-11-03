@@ -105,3 +105,5 @@ google:
 skill_software_keywords: [RNN(LSTM / GRU), CNN, BERT, GCN*, GAN, 机器学习(LR / Tree / Bagging / Boosting / SVM / NB)]
 skill_mobile_app_keywords: [数据分析(numpy / pandas / matplotlib / plotly), 多因子策略, 价值选股与RSRS择时, 期限套利]
 skill_windows_keywords: [管理学学士, 工学学士, 管理科学与工程硕士*]
+
+github: [metadata]
