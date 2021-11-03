@@ -51,8 +51,7 @@ with open('./data.txt') as file:
 
 ![image-20211103191002465](/img/eastmoney/image-20211103191002465.png)
 
-每一对**宁德时代的股民**与**宁德时代**的对话, 它们周围都有一些相似的html标记. 比如, 如果不算`换行符`和`空格`之类的干扰,  ` <div class="qa_question_text">`之后, 接的一般都是**宁德时代的股民**的提问; 而`<div class="qa_answer_text">`之后, 并不直接跟着**宁德时代**的回答, 而是
-
+每一对**宁德时代的股民**与**宁德时代**的对话, 它们周围都有一些相似的html标记. 比如, 如果不算`换行符`和`空格`之类的干扰,  `<div class="qa_question_text">`之后, 接的一般都是**宁德时代的股民**的提问; 而`<div class="qa_answer_text">`之后, 并不直接跟着**宁德时代**的回答, 而是
 
 ```html
 <div class="icon icon_answer_small"></div>
@@ -83,3 +82,59 @@ with open('./data.txt') as file:
 
 同样地, `<\/div>`, `<div class="qa_answer_text">`, `<p>`, `<\/p>`都是我们想要精确匹配的. 我们可以把它们理解成扫描二维码时用来定位的那几个大黑块, 它们并不携带我们想要的信息, 但是我们想要的信息被包裹在其中.
 
+* `\`是为了表示转义字符`/` (`\/`才能在正则表达式里表示`/`, 或许你不理解这一点, 但是, 看看`regexr.com`的侧边栏`cheatsheet`或许你就明白了)
+
+<img src=/img/eastmoney/image-20211103194912573.png width=400 />
+
+可以看出, 现在, 我们的正则表达式还剩下`([\s\S]*?)`, `[\s\S]*?`, `[\s\S]*?`, `([\s\S]*?)`, 而这四个有两个还是相同的, 就只剩下了`([\s\S]*?)`, `[\s\S]*?`. 而它们俩的区别只是少了一对括号`()`.
+
+那么, `[\s\S]*?`在做什么事呢? 一句话总结, 它能匹配两个精确字符串之间的全部字符. 比如我们截图里这个就在匹配`<div class="qa_question_text">`和`<\/div>`之间的全部字符. 
+
+<img src=/img/eastmoney/image-20211103194218025.png alt="image-20211103194218025" width=400 />
+
+至于它具体是怎么实现的嘛, 在`https://regexr.com/`上, 把鼠标移动到某个正则表达式代码附近, 网站就会提示你, 用`小灰框`框出可以拆分的最小单元, 然后告诉你这个小单元是在做什么. 
+
+然后, 结合着右边的`Cheatsheet`, 你可以弄懂任何和正则表达式有关的知识!
+
+那么, 你也能发现用`()`把`[\s\S]*?`括起来, 是为了把`[\s\S]*?`匹配到的字符串当作一个group来对待, 方便后续使用. 
+
+显然, 这里, 我们把**股民的问题**和**宁德时代的回答**分别括起来了.
+
+# Python的正则表达式实现
+
+我们首先需要导入一个叫`re`的包, 毫无疑问, 它是`regular expression`的缩写.
+
+`re`为我们提供了一个名为`findall`的函数, suggested by its name, 它能找到所有的符合条件的子串.
+
+一般来说, `re.findall`接受两个参数, 就能够实现功能. 
+
+* `string`: where to look up, here the long raw html
+* `pattern`: the string you try and try and find satisfying in https://regexr.com/
+
+```python
+import re
+question_answer_pairs = re.findall(string=html,
+                                   pattern=r'<div class="qa_question_text">([\s\S]*?)<\/div>[\s\S]*?<div class="qa_answer_text">[\s\S]*?<p>([\s\S]*?)<\/p>')
+```
+
+到这一步, 你已经基本上把我们想要的信息找到了. 但是用在`Python Console`里输出一下, 你发现, 还有小瑕疵:
+
+![image-20211103200458414](/img/eastmoney/image-20211103200458414.png)
+
+`\n`表示换行符, 也就是我们在word按下`enter`之后屏幕上出现的符号. 
+
+我们想要干净的文本, 所以我们用`str`自带的`strip`方法, 就能很方便地去掉开头和结尾的换行符:
+
+![image-20211103200730500](/img/eastmoney/image-20211103200730500.png)
+
+那么, 我们用`list comprehension`对所有的文本都来一遍:
+
+```python
+question_answer_pairs = [(q.strip(), a.strip()) for q, a in question_answer_pairs]
+```
+
+到此为止, 我们已经实现了从一段原始的html文件中提取出一对对的股民与上市公司的问答.
+
+# 未完待续
+
+那么, 如何用爬虫来自动地获取html文件呢, 怎么样才能不用人工点击那个`点击加载更多`按钮呢? 我们下期见.
