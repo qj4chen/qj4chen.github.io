@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 正则表达式：从投资者问里提取每经AI新闻
-categories：
+categories:
   - 正则表达式
   - 财经文本
 keywords:
