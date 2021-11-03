@@ -24,19 +24,19 @@ categories:
 
 前面这几行没什么好说的, 定义了两个集合, 一个`推文集合`, 一个`用户集合`, 然后用`单词集合`来表示每一篇推文.
 
-![image-20211103145810670](/img/gcan/image-20211103145810670.png)
+<img src="/img/gcan/image-20211103145810670.png" alt="image-20211103145810670" style="zoom:50%;" />
 
 紧接着, 作者定义了`用户特征`和`传播路径`. 所谓传播路径就是
 
 > a sequence of retweet records.
 
-![image-20211103150120670](/img/gcan/image-20211103150120670.png)
+<img src="/img/gcan/image-20211103150120670.png" alt="image-20211103150120670" style="zoom:50%;" />
 
 一条传播路径由一个个包含3个元素的tuple组成. 每个tuple里包含了在 $t_j\\$时刻
 
 
 
-![image-20211103150619447](/img/gcan/image-20211103150619447.png)
+<img src="/img/gcan/image-20211103150619447.png" alt="image-20211103150619447" style="zoom:50%;" />
 
 作者将假新闻探测建模成
 
