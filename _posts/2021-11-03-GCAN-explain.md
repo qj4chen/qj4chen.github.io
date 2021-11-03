@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ”【论文解读】GCAN: Graph-aware Co-Attention Networks for Explainable Fake News Detection on Social Media”
+title: "【论文解读】GCAN: Graph-aware Co-Attention Networks for Explainable Fake News Detection on Social Media"
 categories:
   - 论文解读
   - Fake News
