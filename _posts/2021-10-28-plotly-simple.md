@@ -8,9 +8,9 @@ categories:
 
 ---
 
-> EXCLUSIVE! For my beautiful and cute wife only.
-
-this tutorial aims to finish THREE popular tasks concerning data analysis, data visualization and combining it into html file, a.k.a for the purpose of using the analysis elsewhere other than local computer
+> EXCLUSIVE! This tutorial was originally created for my beautiful and cute wife learning about Python Data Visualization in some financial cases.
+>
+> Well, this tutorial aims to finish THREE popular tasks concerning data analysis, data visualization and combining it into html file, aka. for the purpose of using the analysis elsewhere other than local computer.
 
 # Step 1: data analysis
 
@@ -24,7 +24,7 @@ Use your account to log into the [site](https://tushare.pro/) for further steps.
 
 After log in to the `tushare` site, you need to navigate to the user center and find below the `接口Token` panel and copy your token. 
 
-![Screen shot of `tushare` user center](/img/kline_using_plotly_easy/tushare_token.png)
+<img src="/img/kline_using_plotly_easy/tushare_token.png" alt="Screen shot of `tushare` user center" width=500 />
 
 With the token you just found, you are now able to request data from  `tushare` using the user-friendly api provided by them. You may not be familiar with what api is, but all you need to know about it is api is the first approach you should try if you want to fetch from a data source, and if it is not available, then other approached may be considered such as web crawler and manually downloading.
 
@@ -73,7 +73,7 @@ df.sort_index(inplace=True)
 
 # Step 2: Plot with `Plotly`
 
-Plotly is a powerful tool producing interactive charts, and without question it has its python package. Install this package by typing `pip install plotly` into your terminal or shell.
+`Plotly ` is a powerful tool producing interactive charts, and without question it has its python package. Install this package by typing `pip install plotly` into your terminal or shell.
 
 # 2.1 produce a plot
 
@@ -97,7 +97,8 @@ fig.show()
 ```
 
 You may have discovered that k-lines is acually a candlestick plot using `open price`, `high price`, `low price`, `close price` and the candle stick is composed as the picture below.
-![picture](/img/kline_using_plotly_easy/candlestick.png)
+
+<img src="/img/kline_using_plotly_easy/candlestick.png" alt="picture" width=400 />
 
 # 2.2 save the plot as a html file
 
@@ -115,11 +116,11 @@ We know that construct a beautiful webpage requires lots of work. And for the oc
 
 We create a simple word document as shown in the picture below
 
-![pic](/img/kline_using_plotly_easy/word.png)
+<img src="/img/kline_using_plotly_easy/word.png" alt="pic" width=400 />
 
 We then save the file as a html file by clicking `文件-另存为`, and select the file type as illustrated. 
 
-![pic](/img/kline_using_plotly_easy/word_save_as.png)
+<img src="/img/kline_using_plotly_easy/word_save_as.png" alt="pic" width=400 />
 
 And then use a text editor software to modify the doc, here we use `Visual Studio Code` for demonstration.
 
@@ -146,7 +147,8 @@ Thanks to `plotly` and `Github`, we can now render our analysis to the Magic Liq
 
 <iframe scrolling="no" style="border:none;" seamless="seamless" 
 src="https://qj4chen.github.io/sample_plot/" 
-height="500" width="100%">
+height=900
+width="100%">
 </iframe>
 
 ![pic](/img/kline_using_plotly_easy/last.png)

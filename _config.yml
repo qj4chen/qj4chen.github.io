@@ -59,7 +59,7 @@ lsi: false
 quiet: false
 excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
-gems:
+plugins:
     - jekyll-github-metadata
     - rouge
 #     - jekyll-html-pipeline
@@ -79,7 +79,7 @@ repository: qj4chen/qj4chen.github.io
 #      Socials     #
 # ---------------- #
 github_username: qj4chen
-zhihu_username: qj4chen
+zhihu_username: no_zhihu_account_yet
 
 # ---------------- #
 #      Comments    #
