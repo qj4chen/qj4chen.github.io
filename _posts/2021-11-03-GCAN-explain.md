@@ -26,6 +26,7 @@ categories:
 
 <img src="/img/gcan/image-20211103145810670.png" alt="image-20211103145810670" width=400 />
 
+
 紧接着, 作者定义了`用户特征`和`传播路径`. 所谓传播路径就是
 
 > a sequence of retweet records.
