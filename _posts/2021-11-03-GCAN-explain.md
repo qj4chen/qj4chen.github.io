@@ -30,7 +30,7 @@ categories:
 
 > a sequence of retweet records.
 
-![image-20211103150120670](img/gcan/image-20211103150120670.png)
+![image-20211103150120670](/img/gcan/image-20211103150120670.png)
 
 一条传播路径由一个个包含3个元素的tuple组成. 每个tuple里包含了在 $t_j\\$
 
