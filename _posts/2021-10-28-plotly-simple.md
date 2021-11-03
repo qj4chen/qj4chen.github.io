@@ -143,6 +143,12 @@ Then again, if you have question about this, feel free to consult to the web for
 # Finally
 
 Thanks to `plotly` and `Github`, we can now render our analysis to the Magic Liquid Gold in China vividly in our browser.
+
+<iframe scrolling="no" style="border:none;" seamless="seamless" 
+src="https://qj4chen.github.io/sample_plot/" 
+height="500" width="100%">
+</iframe>
+
 ![pic](/img/kline_using_plotly_easy/last.png)
 
 
