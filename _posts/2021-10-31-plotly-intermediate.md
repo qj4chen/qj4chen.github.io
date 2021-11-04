@@ -8,22 +8,20 @@ categories:
 
 ---
 
-
-
-# customize-financial-plotly-plot
-
->tutorials on further beautifying and adding more functionalities into the plotly plot created in the last tutorial for my wife
+> This tutorial is modified based on my repository [customize-financial-plotly-plot](https://github.com/qj4chen/customize-financial-plotly-plot) and focuses on further beautifying and adding more functionalities into the `plotly` plot created in the last tutorial for my wife.
+>
+> We know that adjusting and choosing among several parameters' combinations is a tedious and time-consuming work. So I hope the people who read this tutorial will not struggle to `button`-or-`layout`-related problems when plotting k-lines.
 
 In this tutorial, we will continue to dive into the world of `plotly`, a powerful toolkit that enables us to produce vivid 
 interactive Python plot.
 
-First, let's recall what we have achieved in the last tutorial.
+First, let's recall what we have achieved in the last [tutorial](https://qj4chen.github.io/2021/10/28/plotly-simple/).
 
 I have created a repository named [`sample_plot`](https://qj4chen.github.io/sample_plot/) hosting a basic daily k-line plot, 
 and by clicking the link you may be automatically redirected to the site. You may have noticed the plot is quite rough, 
 since it could only exhibit a basic daily k-lines plot and the `x range bar` is too tall for a secondary/controlling part of a plot. 
 What if we want to plot the k-lines of 5-days or 1-month and switch among those plots interactively by clicking some buttons 
-as shown in the picture below. And we may also want to make the plot even more elegant to 
+as shown in the picture below. And we may also want to make the plot even more elegant to the original one provided by `eastmoney`, a Chinese giant financial company.
 
 ![pic](/img/kline_using_plotly_intermediate/east-money-k-lines.png)
 
@@ -33,7 +31,7 @@ And Below is the final plot we would have by the end of this tutorial, if you ar
 The first step we need to conduct is to generate resampled data for the plot purpose. For resampling, we introduce the 
 `resample` function from `pandas` package. For the full documentation of this function, please refer to this [`link`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.resample.html).
 
-# Add buttons to the plot
+# Add buttons to the plot to produce different k-lines plot
 
 > In this part, we will introduce how to add buttons to update the layout of the plot,  which is in plain English by clicking one of the buttons you may be able to transform your plot of daily k-lines into a redrawn monthly k-lines.
 
