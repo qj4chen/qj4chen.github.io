@@ -4,6 +4,7 @@ title: 一篇教程：使用plotly绘制k线图（进阶）
 categories:
   - Visualization
   - Python
+  - plotly
 
 ---
 
@@ -30,10 +31,11 @@ And Below is the final plot we would have by the end of this tutorial, if you ar
 ![pic](/img/kline_using_plotly_intermediate/final-plot.png)
 
 The first step we need to conduct is to generate resampled data for the plot purpose. For resampling, we introduce the 
-`resample` function from `pandas` package. For the full documentation of this function, please refer to this 
-[`link`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.resample.html).
+`resample` function from `pandas` package. For the full documentation of this function, please refer to this [`link`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.resample.html).
 
 # Add buttons to the plot
+
+> In this part, we will introduce how to add buttons to update the layout of the plot,  which is in plain English by clicking one of the buttons you may be able to transform your plot of daily k-lines into a redrawn monthly k-lines.
 
 ## resample the data
 
@@ -73,10 +75,25 @@ two prices were calculated under similar logic. While the resampled `vol` is sim
 
 Oops! I forgot to explain one tricky thing we widely used in function definition. The parameter `resample_config` in the function above 
 receives a dict-like type data, and then directed used by the `pandas.resample` function by adding `**` ahead of its name.
-This is an unpacking method of dict-like parameter, which is to say, the parameter `resample_config` could contain all the 
-parameters that could be accepted by `pandas.resample` method by ranging these parameters into a dict with the parameters' names as the keys.
+This is an unpacking method of dict-like parameter, which is to say, the parameter `resample_config` could contain all the parameters that could be accepted by `pandas.resample` method by ranging these parameters into a dict with the parameters' names as the keys.
 
-We would want to calculate five resampled data for what is coming next. 
+Another popular way of constructing the `resample_k_lines` function is that you don't define a specific parameter for your function, instead you use `**kwargs` notation.
+
+```python
+def resample_k_lines(data, **kwargs):
+
+    resampled_data = pd.DataFrame()
+    resampled_data['open'] = data['open'].resample(**kwargs).first()
+    resampled_data['close'] = data['close'].resample(**kwargs).last()
+    resampled_data['low'] = data['low'].resample(**kwargs).min()
+    resampled_data['high'] = data['high'].resample(**kwargs).max()
+    resampled_data['vol'] = data['vol'].resample(**kwargs).sum()
+    resampled_data['color'] = 'red'
+    resampled_data.loc[resampled_data['close'] < resampled_data['open'], 'color'] = 'green'
+    return resampled_data
+```
+
+By either way of implementing the function `resample_k_lines`, we would like to  calculate five resampled data for plotting purpose. 
 
 ```python
 data_list = [df] + [resample_k_lines(df, dict(rule=freq)) for freq in ['1W', '1M', '3M', '6M', '1Y']]
