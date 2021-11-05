@@ -20,7 +20,7 @@ categories:
 
 # 问题建模
 
-> 根据原文`3 Problem Statement`解读
+> 以下根据原文`3 Problem Statement`解读
 
 前面这几行没什么好说的, 定义了两个集合, 一个`推文集合`, 一个`用户集合`, 然后用`单词集合`来表示每一篇推文.
 
@@ -33,15 +33,67 @@ categories:
 
 <img src="/img/gcan/image-20211103150120670.png" alt="image-20211103150120670" width=400  />
 
-一条传播路径由一个个包含3个元素的tuple组成. 每个tuple里包含了在 $t_j\\$时刻
-
-
+某条推特 $s_i\\$ 的一条传播路径 $R_i\\$ 由一个个包含3个元素的tuple组成. 每个tuple里包含了在  $u_j\\$ 这个用户,以及ta的各种属性 $x_j\\$ , 以及ta转发这条推特的时间 $t_j\\$ . 数据集里包含了 $s_i\\$ 的标签 `fake` or `true`, 注意到, 这个标签随着时间从 $t_1\\$ 变到 $t_K$ (传播路径 $R_i\\$ 上一共有 $K\\$ 个用户 ) 是**保持不变的**.
 
 <img src="/img/gcan/image-20211103150619447.png" alt="image-20211103150619447" width=400  />
 
-作者将假新闻探测建模成
+<span id="用户特征">
 
-模型结构如下:
+此外, 根据后文, 用户 $u_j\\$ 的特征 $x_j\\$ 主要包括:
+
+* number of words in a user’s self-description
+* number of words in $u_j\\$ 's screen name
+* number of users who follows $u_j\\$
+* number of users that $u_j\\$ is following
+* number of created stories for $u_j\\$
+* time elapsed after $u_j\\$' s first story
+* whether the $u_j\\$ account is verified or not
+* whether $u_j\\$ allows the geo-spatial positioning
+* time difference between the source tweet’s post time and $u_j\\$ ’s retweet time
+* the length of retweet path between $u_j\\$ and the source tweet (1 if $u_j\\$ retweets the source tweet)
+
+作者希望通过**传播路径**和**原始推文**来做一个二分类问题, 即原始推文是真还是假. 并且, 作者希望模型能针对**假新闻的样例**给人们启示:
+
+* 找出那部分少量的可疑用户
+* 找出假新闻中独特的词语
+
+<img src="/img/gcan/image-20211105103606361.png" alt="image-20211105103606361" width=400 />
+
+# 模型结构
+
+> 总体来说, 下面的图片概括了原文章提出的深度学习模型.
+
+模型主要包括5个部分:
+
+* 用户特征提取(user characteristics extraction)
+  * 对每个用户$u_j\\$ , 都能提取出特征 $x_j\\$ , 具体描述见[上文](#用户特征)
+* 推文的表征(news story encoding) //如何翻译encoding比较好呢
+  * 设定文本的最大长度$m\\$,  zero padding to maximum length
+  * 通过全连接层生成 $d\\$ 维的word embedding $V = [v_1, v_2, ..., v_m]\\$
+  * 使用GRU来学习$V\\$里的次序特征, $s_t=GRU(v_t), t=1, ..., m$
+  * 最终的推文表征为 $S = [s^{1}, s^{2}, ..., s^{m}]\in \mathbb{R}^{d \times m}\\$
+* 传播途径的表征 
+  * user propagation representation
+  
+    > 针对传播路径 $R_i\\$ 中用户特征 $[x_1, ..., x_j, ..., x_K]$ 的处理
+  
+    * GRU-based representation
+    * CNN-based representation (1-Dimension)
+  
+  * graph-aware propagation representation
+  
+    * 全连接的图; 用户作为节点; 两个用户的相似度作为边, 通过用户的特征向量$x_i\\$, $x_j\\$ 的余弦相似度计算得出.
+    * 两个GCN层叠加 
+* 耦合的注意力机制(co-attention mechanisms 用于捕捉`推文`和`传播途径`之间的关系)
+* 预测(make prediction)
 
 ![模型图](/img/gcan/model_arch.png)
+
+# 总结
+
+用机器学习来研究假新闻的传播, 检测, 是近几年比较流行的话题.
+
+# 参考
+
+- Lu, Y.-J., & Li, C.-T. (2020). GCAN: Graph-aware Co-Attention Networks for Explainable Fake News Detection on Social Media. *Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics*, 505–514. https://doi.org/10.18653/v1/2020.acl-main.48
 
