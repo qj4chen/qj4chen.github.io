@@ -1,5 +1,6 @@
 ---
 layout: post
+typora-root-url: ..
 title: 正则表达式：从投资者问里提取每经AI新闻
 categories:
   - 正则表达式

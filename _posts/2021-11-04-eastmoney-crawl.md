@@ -1,5 +1,6 @@
 ---
 layout: post
+typora-root-url: ..
 title: 【动态请求】：用代码帮我们来“点击加载更多”
 categories:
   - 爬虫

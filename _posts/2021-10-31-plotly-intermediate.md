@@ -1,5 +1,6 @@
 ---
 layout: post
+typora-root-url: ..
 title: 一篇教程：使用plotly绘制k线图（进阶）
 categories:
   - Visualization
