@@ -8,9 +8,3 @@ menu: 链接
 permalink: /links/
 ---
 
-> God made relatives. Thank God we can choose our friends.
-
-* [CHONPS工作室](http://chonps.online;)
-* [Corkine‘s Huginn](http://huginn.mazhangjing.com:3000)
-
-[博客](/) | [后台管理系统](/console)

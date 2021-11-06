@@ -8,7 +8,7 @@ menu: 维基
 permalink: /wiki/
 ---
 
-> 以下展示了部分长文：
+> 以下展示了部分篇幅较长的文章：
 
 <ul class="listing">
 {% for wiki in site.wiki %}
