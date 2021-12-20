@@ -25,6 +25,8 @@
 5. 写作时的注意事项：
 
    1. YAML头里的字段如果出现了英文冒号`:`一定要用引文引号包围，不然会解析失败。
+   2. 如果使用`vscode`, 参考这篇[博客](https://qin-dong.github.io/2019/09/20/vscode-markdown-editor/)
+
 
    
 

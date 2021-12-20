@@ -35,6 +35,7 @@ categories:
 因为东方财富体量巨大, 需要对众多上市公司的信息进行维护, 我们合理地推测: 网址的链接也是有一定的规律可循的. 例如: `http://guba.eastmoney.com/qa/qa_search.aspx?company=600519&keyword=&questioner=&qatype=1`中的`company=600519`, 若是把`600519`换成别的公司的代码, 或许就是别的公司的问董秘板块. 
 
 当然, 这一切都是猜测. 是否是这样, 我们需要后续的调试和进一步的观察.
+<div style="text-align:center;"><img src="../img/2019/2021-12-08-16-08-46.png"></div>
 
 # 网页调试
 
